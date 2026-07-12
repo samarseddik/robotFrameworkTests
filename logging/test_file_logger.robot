@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation    Test cases for FileLogger keywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/logging/FileLogger.robot
-# Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/logging/ExecutionLogger.robot
-# Suite Teardown   Run Keywords
-# ...    Stop Execution Logging    ${LOG_PATH}    AND
-# ...    Sleep    1s    AND
-# ...    Remove Directory    ${LOG_PATH}    recursive=True
+Resource    ${KEYWORDS_PATH}/logging/FileLogger.robot
+Resource    ${KEYWORDS_PATH}/logging/ExecutionLogger.robot
+Suite Teardown   Run Keywords
+...    Stop Execution Logging    ${LOG_PATH}    AND
+...    Sleep    1s    AND
+...    Remove Directory    ${LOG_PATH}    recursive=True
 
 
 *** Variables ***

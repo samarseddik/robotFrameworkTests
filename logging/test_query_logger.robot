@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Test cases for QueryLogger keywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/logging/FileLogger.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/logging/QueryLogger.robot
+Resource    ${KEYWORDS_PATH}/logging/FileLogger.robot
+Resource    ${KEYWORDS_PATH}/logging/QueryLogger.robot
 Suite Setup      Create Log File    ${LOG_PATH}    ${LOG_FILE}    Query Log
 Suite Teardown   Run Keywords
 ...    Sleep    1s    AND
