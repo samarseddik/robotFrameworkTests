@@ -34,11 +34,13 @@ jobs:
       - name: Run Logging Tests
         run: |
           robot --outputdir results/logging \
+                --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 logging/
 
       - name: Run API Tests
         run: |
           robot --outputdir results/api \
+                --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 api/
 
       - name: Upload Test Results
