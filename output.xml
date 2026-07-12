@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-07-11T23:37:04.150539" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Api Validation" source="C:\Users\Lenovo\Desktop\robotFrameworkTests\api\test_api_validation.robot">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Create API Session" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:04.450187" level="INFO">Creating API session for https://bms.startnow-fr.com/backend/api with alias 'api_session'</msg>
+<arg>Creating API session for ${base_url} with alias '${alias}'</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.449665" elapsed="0.000620"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:04.450849" level="INFO">Creating Session using : alias=api_session, url=https://bms.startnow-fr.com/backend/api, headers={},                     cookies={}, auth=None, timeout=30, proxies=None, verify=True,                     debug=0 </msg>
+<arg>${alias}</arg>
+<arg>${base_url}</arg>
+<arg>verify=${verify_ssl}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-07-11T23:37:04.450476" elapsed="0.000625"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:04.451771" level="INFO">${API_SESSION} = api_session</msg>
+<arg>${API_SESSION}</arg>
+<arg>${alias}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.451291" elapsed="0.000545"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:04.452427" level="INFO">${API_BASE_URL} = https://bms.startnow-fr.com/backend/api</msg>
+<arg>${API_BASE_URL}</arg>
+<arg>${base_url}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.452002" elapsed="0.000488"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:04.453046" level="INFO">${API_TIMEOUT} = 30</msg>
+<arg>${API_TIMEOUT}</arg>
+<arg>${timeout}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.452645" elapsed="0.000464"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:04.453665" level="INFO">${API_VERIFY_SSL} = True</msg>
+<arg>${API_VERIFY_SSL}</arg>
+<arg>${verify_ssl}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.453259" elapsed="0.000466"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:04.454289" level="INFO">API session 'api_session' created successfully</msg>
+<arg>API session '${alias}' created successfully</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.453866" elapsed="0.000492"/>
+</kw>
+<return>
+<value>${alias}</value>
+<status status="PASS" start="2026-07-11T23:37:04.454436" elapsed="0.000068"/>
+</return>
+<arg>${BASE_URL}</arg>
+<doc>Creates a reusable HTTP session for the given base URL.
+This session is used by all request keywords in ApiClient.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.449077" elapsed="0.006351"/>
+</kw>
+<kw name="Login And Set Token">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:04.460683" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.457336" elapsed="0.003485"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:04.462820" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.462069" elapsed="0.000843"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:05.578868" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:05.579345" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:11 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '59', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzg1MDE5MDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6ImZsV1BRUlVHOWY5U3BsSTMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.HFnupz_Q-WS91R5udXxTGXinq3yrE6MrXT2y2d5zu44; expires=Sat, 25-Jul-2026 22:37:11 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzgzODEwMDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6IlUxd055SGVYN1puODAxRFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Jgwtz3vTAlcZeoo51i2Q0Q90DUshZKWq8Q8etfb6VBo","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzg1MDE5MDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6ImZsV1BRUlVHOWY5U3BsSTMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.HFnupz_Q-WS91R5udXxTGXinq3yrE6MrXT2y2d5zu44","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:05.579899" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.463095" elapsed="1.116935"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.582194" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.580643" elapsed="0.001757"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.586438" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.582859" elapsed="0.003834"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:05.586947" elapsed="0.000184"/>
+</return>
+<msg time="2026-07-11T23:37:05.587774" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.461324" elapsed="1.126579"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.592239" level="INFO">${token} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzgzODEwMDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6IlUxd055SGVYN1puODA...</msg>
+<var>${token}</var>
+<arg>${response.json()}[accessToken]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.588508" elapsed="0.003879"/>
+</kw>
+<kw name="Set Bearer Token" owner="ApiAuth">
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.595930" level="INFO">Length is 329.</msg>
+<arg>${token}</arg>
+<arg>Bearer token cannot be empty</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.594187" elapsed="0.002615"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.600016" level="INFO">${auth_headers} = {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzgzODEwMDMxLCJuYmYiOjE3ODM4MDk0MzEsI...</msg>
+<var>${auth_headers}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.598194" elapsed="0.001971"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.602221" level="INFO">${AUTH_TYPE} = Bearer</msg>
+<arg>${AUTH_TYPE}</arg>
+<arg>Bearer</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.600701" elapsed="0.001671"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.603791" level="INFO">${AUTH_TOKEN} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzgzODEwMDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6IlUxd055SGVYN1puODA...</msg>
+<arg>${AUTH_TOKEN}</arg>
+<arg>${token}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.602758" elapsed="0.001172"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.605431" level="INFO">&amp;{AUTH_HEADERS} = { Authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzgzODEwMDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0...</msg>
+<arg>&amp;{AUTH_HEADERS}</arg>
+<arg>&amp;{auth_headers}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.604306" elapsed="0.001258"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.606582" level="INFO">Bearer token authentication configured</msg>
+<arg>Bearer token authentication configured</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.605864" elapsed="0.000852"/>
+</kw>
+<return>
+<value>${auth_headers}</value>
+<status status="PASS" start="2026-07-11T23:37:05.606859" elapsed="0.000083"/>
+</return>
+<arg>${token}</arg>
+<doc>Configures Bearer token authentication.
+Stores the Authorization header for use in subsequent requests.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.593215" elapsed="0.014000"/>
+</kw>
+<status status="PASS" start="2026-07-11T23:37:04.456723" elapsed="1.150658"/>
+</kw>
+<arg>Create API Session</arg>
+<arg>${BASE_URL}</arg>
+<arg>AND</arg>
+<arg>Login And Set Token</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.448089" elapsed="1.159402"/>
+</kw>
+<test id="s1-t1" name="TC-VAL-API-001 Validate Status Code 200" line="26">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.610915" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.609320" elapsed="0.001696"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:05.614270" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.613325" elapsed="0.001089"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:06.174126" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzg1MDE5MDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6ImZsV1BRUlVHOWY5U3BsSTMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.HFnupz_Q-WS91R5udXxTGXinq3yrE6MrXT2y2d5zu44', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:06.174489" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:11 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '58', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzg1MDE5MDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6ImpRMndYbTFtOE0wRVl4clciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.dzM3mmdgUlFBGNV1_vvA6pnfu0enhTE-9urxhqpHQY8; expires=Sat, 25-Jul-2026 22:37:11 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzgzODEwMDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6IlZGb01XaFIyNHRudDFTbUoiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Rzbin-WQS3beL5gAoqbLHraKvnO6a49sSeKiaE7_zi8","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzg1MDE5MDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6ImpRMndYbTFtOE0wRVl4clciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.dzM3mmdgUlFBGNV1_vvA6pnfu0enhTE-9urxhqpHQY8","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:06.175005" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.614721" elapsed="0.560407"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.177477" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.175961" elapsed="0.001676"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.180040" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.178005" elapsed="0.002193"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:06.180358" elapsed="0.000091"/>
+</return>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:05.612055" elapsed="0.568701"/>
+</kw>
+<kw name="Validate Status Code" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.184218" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.182937" elapsed="0.001383"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.186469" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.184887" elapsed="0.001908"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.192072" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${target.status_code}</arg>
+<arg>${expected_status}</arg>
+<arg>Expected status code ${expected_status} but got ${target.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.187399" elapsed="0.005001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.196620" level="INFO">Status code validated: 200</msg>
+<arg>Status code validated: ${target.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.192952" elapsed="0.003962"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:06.197192" elapsed="0.000155"/>
+</return>
+<msg time="2026-07-11T23:37:06.198143" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>200</arg>
+<doc>Validates that the response status code matches the expected value.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.181987" elapsed="0.016335"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.199287" elapsed="0.001267"/>
+</kw>
+<doc>Verifies that login returns status 200.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:05.607688" elapsed="0.593847"/>
+</test>
+<test id="s1-t2" name="TC-VAL-API-002 Validate Status Code In List" line="34">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.207068" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.205240" elapsed="0.001901"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.214892" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.213522" elapsed="0.001560"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:06.546359" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzg1MDE5MDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6ImpRMndYbTFtOE0wRVl4clciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.dzM3mmdgUlFBGNV1_vvA6pnfu0enhTE-9urxhqpHQY8', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:06.546714" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:12 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '57', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMiwiZXhwIjoxNzg1MDE5MDMyLCJuYmYiOjE3ODM4MDk0MzIsImp0aSI6IkhtZDBXeGN6U0RIbkEyTnYiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.55IEUC29da3UEv4g3hAHM1bPhXLAhlQgcaoMS9KHeqE; expires=Sat, 25-Jul-2026 22:37:12 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMiwiZXhwIjoxNzgzODEwMDMyLCJuYmYiOjE3ODM4MDk0MzIsImp0aSI6IkF6a3kyNEJpUjd1YUpGVHUiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.BcjHupNY7lrgfEZsiEBLJPpC9nbeYxOGfmS4OdhZ9Ho","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMiwiZXhwIjoxNzg1MDE5MDMyLCJuYmYiOjE3ODM4MDk0MzIsImp0aSI6IkhtZDBXeGN6U0RIbkEyTnYiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.55IEUC29da3UEv4g3hAHM1bPhXLAhlQgcaoMS9KHeqE","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:06.547243" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.215445" elapsed="0.331931"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.551369" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.548169" elapsed="0.003588"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.558090" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.552579" elapsed="0.005873"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:06.558829" elapsed="0.000187"/>
+</return>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.207955" elapsed="0.351837"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.569253" level="INFO">${expected} = [200, 201, 204]</msg>
+<var>${expected}</var>
+<arg>${200}</arg>
+<arg>${201}</arg>
+<arg>${204}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.561219" elapsed="0.008193"/>
+</kw>
+<kw name="Validate Status Code In List" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.578404" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.573785" elapsed="0.005085"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.581098" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.579668" elapsed="0.001711"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${expected_statuses}</arg>
+<arg>${target.status_code}</arg>
+<arg>Status code ${target.status_code} not in expected list: ${expected_statuses}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.581869" elapsed="0.004870"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.602267" level="INFO">Status code 200 is in expected list</msg>
+<arg>Status code ${target.status_code} is in expected list</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.587274" elapsed="0.015677"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:06.603218" elapsed="0.000148"/>
+</return>
+<msg time="2026-07-11T23:37:06.604282" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>${expected}</arg>
+<doc>Validates that the response status code is one of the expected values.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.570898" elapsed="0.033530"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.605561" elapsed="0.001307"/>
+</kw>
+<doc>Verifies that status code is in expected list.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:06.203389" elapsed="0.404655"/>
+</test>
+<test id="s1-t3" name="TC-VAL-API-003 Validate Response Body Is Not Empty" line="43">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.617770" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.614571" elapsed="0.003375"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.629228" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.626420" elapsed="0.003177"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:06.838633" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMiwiZXhwIjoxNzg1MDE5MDMyLCJuYmYiOjE3ODM4MDk0MzIsImp0aSI6IkhtZDBXeGN6U0RIbkEyTnYiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.55IEUC29da3UEv4g3hAHM1bPhXLAhlQgcaoMS9KHeqE', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:06.838977" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:12 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '56', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMiwiZXhwIjoxNzg1MDE5MDMyLCJuYmYiOjE3ODM4MDk0MzIsImp0aSI6IlJuM0lZVWpEQk1wMDN4QmMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.0Ug421KrWG0MrpQvqElS8IMQAxOKlD95YHAOYx4OGpY; expires=Sat, 25-Jul-2026 22:37:12 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMiwiZXhwIjoxNzgzODEwMDMyLCJuYmYiOjE3ODM4MDk0MzIsImp0aSI6ImZxaXlUTkpzY2k0RFA2WWsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.HkdKNidjIdeFcbGYc2BYL-TOEhwBtePEn64M2lLaChQ","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMiwiZXhwIjoxNzg1MDE5MDMyLCJuYmYiOjE3ODM4MDk0MzIsImp0aSI6IlJuM0lZVWpEQk1wMDN4QmMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.0Ug421KrWG0MrpQvqElS8IMQAxOKlD95YHAOYx4OGpY","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:06.839758" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.630434" elapsed="0.209477"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.842147" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.840644" elapsed="0.001702"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.845735" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.842795" elapsed="0.003164"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:06.846274" elapsed="0.000127"/>
+</return>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.619839" elapsed="0.227012"/>
+</kw>
+<kw name="Validate Response Body Is Not Empty" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.851605" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.849870" elapsed="0.001877"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.853481" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.852223" elapsed="0.001503"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.858403" level="INFO">Length is 870.</msg>
+<arg>${target.text}</arg>
+<arg>Response body is empty</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.854167" elapsed="0.004734"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.861964" level="INFO">Response body is not empty</msg>
+<arg>Response body is not empty</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.860061" elapsed="0.002159"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:06.862488" elapsed="0.000139"/>
+</return>
+<msg time="2026-07-11T23:37:06.863296" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<doc>Validates that the response body is not empty.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.848627" elapsed="0.014887"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.864832" elapsed="0.002392"/>
+</kw>
+<doc>Verifies that response body is not empty.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:06.610476" elapsed="0.258179"/>
+</test>
+<test id="s1-t4" name="TC-VAL-API-004 Validate Response Is JSON" line="51">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.878787" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.875766" elapsed="0.003181"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:06.893993" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.892802" elapsed="0.001349"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:07.090194" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMiwiZXhwIjoxNzg1MDE5MDMyLCJuYmYiOjE3ODM4MDk0MzIsImp0aSI6IlJuM0lZVWpEQk1wMDN4QmMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.0Ug421KrWG0MrpQvqElS8IMQAxOKlD95YHAOYx4OGpY', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:07.090754" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:13 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '55', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6InRrdUE4Q1VOak9BQmlodVciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.qoIz_4vI515GSJTxwJLqv_Jx10jDk4kbpB-Cl49LNQs; expires=Sat, 25-Jul-2026 22:37:13 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6Im5lY1Y5QXJzZzFXT1FDeFAiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Iu1_8Pn1GYyitjzEyyutVMZ4ilvnv0FndoT28QI1Wp4","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6InRrdUE4Q1VOak9BQmlodVciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.qoIz_4vI515GSJTxwJLqv_Jx10jDk4kbpB-Cl49LNQs","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:07.091607" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.894483" elapsed="0.197281"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.093996" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.092496" elapsed="0.001703"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.099180" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.094650" elapsed="0.004779"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:07.099855" elapsed="0.000354"/>
+</return>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:06.889392" elapsed="0.211383"/>
+</kw>
+<kw name="Validate Response Is JSON" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.105441" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.103625" elapsed="0.001958"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.107456" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.106174" elapsed="0.001540"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Set Variable" owner="BuiltIn">
+<arg>${target.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.109439" elapsed="0.002709"/>
+</kw>
+<msg time="2026-07-11T23:37:07.112615" level="INFO">${status} = PASS</msg>
+<msg time="2026-07-11T23:37:07.112848" level="INFO">${body} = {'accessToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6Im...</msg>
+<var>${status}</var>
+<var>${body}</var>
+<arg>Set Variable</arg>
+<arg>${target.json()}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.108231" elapsed="0.004730"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>PASS</arg>
+<arg>Response body is not valid JSON: ${target.text}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.113449" elapsed="0.003855"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.120790" level="INFO">Response body is valid JSON</msg>
+<arg>Response body is valid JSON</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.118323" elapsed="0.002922"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:07.121610" elapsed="0.000160"/>
+</return>
+<msg time="2026-07-11T23:37:07.122464" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<doc>Validates that the response body is valid JSON.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.102368" elapsed="0.020292"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.124337" elapsed="0.002283"/>
+</kw>
+<doc>Verifies that response body is valid JSON.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:06.872103" elapsed="0.255754"/>
+</test>
+<test id="s1-t5" name="TC-VAL-API-005 Validate Response Body Contains Key" line="59">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.143459" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.134665" elapsed="0.009594"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.148382" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.147430" elapsed="0.001102"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:07.351887" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6InRrdUE4Q1VOak9BQmlodVciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.qoIz_4vI515GSJTxwJLqv_Jx10jDk4kbpB-Cl49LNQs', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:07.352218" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:13 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '54', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6IjJ3dVJWMFBwd0tPUFE5YkEiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.nyCXbEuX4kr-H5x8KSqcheQ1lbFa0vXYaX-r_3ICxPA; expires=Sat, 25-Jul-2026 22:37:13 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6IjJYSEh3dVhnR3NkSkk0VWgiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Joh621_3lJQKTCI5Lqw66b7WQR268cqlxfX_XH1bb_o","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6IjJ3dVJWMFBwd0tPUFE5YkEiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.nyCXbEuX4kr-H5x8KSqcheQ1lbFa0vXYaX-r_3ICxPA","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:07.352711" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.148837" elapsed="0.203992"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.354903" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.353436" elapsed="0.001666"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.360070" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.355560" elapsed="0.004757"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:07.360559" elapsed="0.000139"/>
+</return>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.146133" elapsed="0.215008"/>
+</kw>
+<kw name="Validate Response Body Contains Key" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.365816" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.364021" elapsed="0.002025"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.367783" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.366535" elapsed="0.001495"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.371360" level="INFO">${body} = {'accessToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6Ij...</msg>
+<var>${body}</var>
+<arg>${target.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.368500" elapsed="0.002996"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${body}</arg>
+<arg>${key}</arg>
+<arg>Response body does not contain key: ${key}</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.371935" elapsed="0.000895"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.376700" level="INFO">Key 'accessToken' found in response body</msg>
+<arg>Key '${key}' found in response body</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.373897" elapsed="0.003425"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:07.377833" elapsed="0.000230"/>
+</return>
+<msg time="2026-07-11T23:37:07.379003" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>accessToken</arg>
+<doc>Validates that the JSON response body contains the given key.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.362702" elapsed="0.016451"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.380241" elapsed="0.002156"/>
+</kw>
+<doc>Verifies that response body contains accessToken key.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:07.131587" elapsed="0.252301"/>
+</test>
+<test id="s1-t6" name="TC-VAL-API-006 Validate Response Body Field Value" line="67">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.393415" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.391368" elapsed="0.002201"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.411344" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.409680" elapsed="0.001911"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:07.616766" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6IjJ3dVJWMFBwd0tPUFE5YkEiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.nyCXbEuX4kr-H5x8KSqcheQ1lbFa0vXYaX-r_3ICxPA', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:07.617273" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:13 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '53', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6InpKR0EzY241UWppYXU3b08iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.0rGSyPSqadmwOY5U_LlC2M6Zm1ABhAgLR-4Q2zY7Hgw; expires=Sat, 25-Jul-2026 22:37:13 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6IlI1dXRnN29HWWh3Z0tMMlAiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.uqU1kwROTXGcJ6Y_1jgm9Qx9vDUo-Gb9LAKu7x0tD9c","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6InpKR0EzY241UWppYXU3b08iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.0rGSyPSqadmwOY5U_LlC2M6Zm1ABhAgLR-4Q2zY7Hgw","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:07.617825" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.412129" elapsed="0.205827"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.620087" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.618603" elapsed="0.001684"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.623596" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.620732" elapsed="0.003087"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:07.624046" elapsed="0.000123"/>
+</return>
+<msg time="2026-07-11T23:37:07.624827" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.407012" elapsed="0.218034"/>
+</kw>
+<kw name="Get Response Body" owner="ApiClient">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.629966" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.628205" elapsed="0.001904"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.631941" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.630700" elapsed="0.001485"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.635538" level="INFO">${body} = {'accessToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6Il...</msg>
+<var>${body}</var>
+<arg>${target.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.632672" elapsed="0.003005"/>
+</kw>
+<return>
+<value>${body}</value>
+<status status="PASS" start="2026-07-11T23:37:07.636178" elapsed="0.000549"/>
+</return>
+<msg time="2026-07-11T23:37:07.637929" level="INFO">${body_json} = {'accessToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6Il...</msg>
+<var>${body_json}</var>
+<arg>${response}</arg>
+<doc>Returns the parsed JSON body of a response.
+If no response is passed, uses the last stored response.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.626861" elapsed="0.011317"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.641241" level="INFO">Response keys: {'accessToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6IlI1dXRnN29HWWh3Z0tMMlAiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.uqU1kwROTXGcJ6Y_1jgm9Qx9vDUo-Gb9LAKu7x0tD9c', 'refreshToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6InpKR0EzY241UWppYXU3b08iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.0rGSyPSqadmwOY5U_LlC2M6Zm1ABhAgLR-4Q2zY7Hgw', 'email': 'superAdmin@start-now.fr', 'user_name': 'StartNow', 'user_type': 'S', 'user_role': 1, 'building_id': 1, 'user_id': 1, 'user_image': '1749983858.png'}</msg>
+<arg>Response keys: ${body_json}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.639799" elapsed="0.001702"/>
+</kw>
+<kw name="Validate Response Body Contains Key" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.646279" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.644336" elapsed="0.002085"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.647760" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.646830" elapsed="0.001104"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.650278" level="INFO">${body} = {'accessToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6Il...</msg>
+<var>${body}</var>
+<arg>${target.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.648294" elapsed="0.002070"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${body}</arg>
+<arg>${key}</arg>
+<arg>Response body does not contain key: ${key}</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.650656" elapsed="0.000586"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.652361" level="INFO">Key 'accessToken' found in response body</msg>
+<arg>Key '${key}' found in response body</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.651553" elapsed="0.000939"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:07.652630" elapsed="0.000145"/>
+</return>
+<msg time="2026-07-11T23:37:07.653498" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>accessToken</arg>
+<doc>Validates that the JSON response body contains the given key.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.643030" elapsed="0.010637"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.654970" elapsed="0.001468"/>
+</kw>
+<doc>Verifies that response body field has expected value.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:07.389028" elapsed="0.268539"/>
+</test>
+<test id="s1-t7" name="TC-VAL-API-007 Validate Response Header Contains" line="77">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.664725" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.663376" elapsed="0.001448"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.674165" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.668362" elapsed="0.005994"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:07.863695" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6InpKR0EzY241UWppYXU3b08iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.0rGSyPSqadmwOY5U_LlC2M6Zm1ABhAgLR-4Q2zY7Hgw', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:07.864028" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:13 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '52', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6ImNuSGw0cU1QalpMUHBqd3QiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.SEctDuxSITi3TOIFoXPeSDfFtbj2b2RGPH4EiuG9cGY; expires=Sat, 25-Jul-2026 22:37:13 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzgzODEwMDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6IlJ4YWg4M25qNUo2aDdheE8iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PsqHNWGiJtS-dxDOTsm2JyHgdCUONTRv2nmHE5C-2L0","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6ImNuSGw0cU1QalpMUHBqd3QiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.SEctDuxSITi3TOIFoXPeSDfFtbj2b2RGPH4EiuG9cGY","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:07.864628" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.674650" elapsed="0.190100"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.866823" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.865349" elapsed="0.001675"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.870974" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.867471" elapsed="0.003734"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:07.871437" elapsed="0.000127"/>
+</return>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.666061" elapsed="0.205928"/>
+</kw>
+<kw name="Validate Response Header Contains" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.878190" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.874912" elapsed="0.003535"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.881563" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.879402" elapsed="0.002438"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${target.headers}</arg>
+<arg>${header_name}</arg>
+<arg>Response does not contain header: ${header_name}</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.882348" elapsed="0.002508"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.886688" level="INFO">Header 'Content-Type' found in response</msg>
+<arg>Header '${header_name}' found in response</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.885357" elapsed="0.001544"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:07.887119" elapsed="0.000125"/>
+</return>
+<msg time="2026-07-11T23:37:07.887781" level="INFO">${result} = True</msg>
+<var>${result}</var>
+<arg>Content-Type</arg>
+<doc>Validates that a specific header exists in the response.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.873612" elapsed="0.014282"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.889010" elapsed="0.002355"/>
+</kw>
+<doc>Verifies that response contains Content-Type header.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:07.660806" elapsed="0.232082"/>
+</test>
+<test id="s1-t8" name="TC-VAL-API-008 Validate Response Time" line="85">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.904260" level="INFO">${body} = {'email': 'superAdmin@start-now.fr', 'password': 'BMSstart10*'}</msg>
+<var>${body}</var>
+<arg>email=${EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.901706" elapsed="0.002712"/>
+</kw>
+<kw name="POST Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:07.929218" level="INFO">POST https://bms.startnow-fr.com/backend/api/auth/login</msg>
+<arg>POST ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.924604" elapsed="0.005055"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:08.335100" level="INFO">POST Request : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ path_url=/backend/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMywiZXhwIjoxNzg1MDE5MDMzLCJuYmYiOjE3ODM4MDk0MzMsImp0aSI6ImNuSGw0cU1QalpMUHBqd3QiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.SEctDuxSITi3TOIFoXPeSDfFtbj2b2RGPH4EiuG9cGY', 'Content-Length': '63', 'Content-Type': 'application/json'} 
+ body=b'{"email": "superAdmin@start-now.fr", "password": "BMSstart10*"}' 
+ </msg>
+<msg time="2026-07-11T23:37:08.335448" level="INFO">POST Response : url=https://bms.startnow-fr.com/backend/api/auth/login 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:14 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '51', 'Vary': 'Origin', 'Set-Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzNCwiZXhwIjoxNzg1MDE5MDM0LCJuYmYiOjE3ODM4MDk0MzQsImp0aSI6Im9hYVdqQmFub1JyU0FkMVkiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.y90RI1Fd8THL-cxAaQ9JC5OPRM4pt3CpgrTNgnWu7s4; expires=Sat, 25-Jul-2026 22:37:14 GMT; Max-Age=1209600; path=/; secure; httponly; samesite=none', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzNCwiZXhwIjoxNzgzODEwMDM0LCJuYmYiOjE3ODM4MDk0MzQsImp0aSI6IlpUY0w1bEtBQnVBM3NYWXYiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.eZc4b6a0oF9GdjPJx_ZZNI7kfIixLJg-d_-cb8v-IJE","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzNCwiZXhwIjoxNzg1MDE5MDM0LCJuYmYiOjE3ODM4MDk0MzQsImp0aSI6Im9hYVdqQmFub1JyU0FkMVkiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.y90RI1Fd8THL-cxAaQ9JC5OPRM4pt3CpgrTNgnWu7s4","email":"superAdmin@start-now.fr","user_name":"StartNow","user_type":"S","user_role":1,"building_id":1,"user_id":1,"user_image":"1749983858.png"} 
+ </msg>
+<msg time="2026-07-11T23:37:08.336267" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<arg>headers=${headers}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.930654" elapsed="0.406078"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.339198" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.337518" elapsed="0.002012"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.343566" level="INFO">POST /auth/login → 200</msg>
+<arg>POST ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.340328" elapsed="0.003467"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:08.344022" elapsed="0.000126"/>
+</return>
+<arg>${LOGIN_ENDPOINT}</arg>
+<arg>body=${body}</arg>
+<doc>Sends an HTTP POST request with a JSON body to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:07.906733" elapsed="0.437853"/>
+</kw>
+<kw name="Validate Response Time" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.349834" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.347302" elapsed="0.002685"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.351786" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.350502" elapsed="0.001528"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.355107" level="INFO">${elapsed} = 0.399595</msg>
+<var>${elapsed}</var>
+<arg>${target.elapsed.total_seconds()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.352496" elapsed="0.002739"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${elapsed} &lt;= ${max_seconds}</arg>
+<arg>Response time ${elapsed}s exceeded limit of ${max_seconds}s</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.355681" elapsed="0.003983"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.363542" level="INFO">Response time validated: 0.399595s (limit: 5s)</msg>
+<arg>Response time validated: ${elapsed}s (limit: ${max_seconds}s)</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.360716" elapsed="0.003253"/>
+</kw>
+<return>
+<value>${elapsed}</value>
+<status status="PASS" start="2026-07-11T23:37:08.364509" elapsed="0.000223"/>
+</return>
+<msg time="2026-07-11T23:37:08.365852" level="INFO">${elapsed} = 0.399595</msg>
+<var>${elapsed}</var>
+<arg>5</arg>
+<doc>Validates that the response time is within the acceptable limit in seconds.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.345989" elapsed="0.020097"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${elapsed} &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.367423" elapsed="0.001786"/>
+</kw>
+<doc>Verifies that response time is within 5 seconds.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:07.895583" elapsed="0.474690"/>
+</test>
+<test id="s1-t9" name="TC-VAL-API-009 Validate Dashboard Response" line="93">
+<kw name="Get Auth Headers" owner="ApiAuth">
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.393473" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${AUTH_TYPE}</arg>
+<arg>${None}</arg>
+<arg>No authentication configured. Call Set Bearer Token, Set Basic Auth, or Set API Key Auth first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.391339" elapsed="0.002445"/>
+</kw>
+<return>
+<value>${AUTH_HEADERS}</value>
+<status status="PASS" start="2026-07-11T23:37:08.394043" elapsed="0.000160"/>
+</return>
+<msg time="2026-07-11T23:37:08.394751" level="INFO">${headers} = {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzgzODEwMDMxLCJuYmYiOjE3ODM4MDk0MzEsI...</msg>
+<var>${headers}</var>
+<doc>Returns the currently configured authentication headers.
+Use this to merge auth headers into request headers.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.378551" elapsed="0.016279"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.400852" level="INFO">${params} = {'building_id': '1'}</msg>
+<var>${params}</var>
+<arg>building_id=1</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.398244" elapsed="0.002715"/>
+</kw>
+<kw name="GET Request" owner="ApiClient">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.404488" level="INFO">GET https://bms.startnow-fr.com/backend/api/dashboard/charts</msg>
+<arg>GET ${API_BASE_URL}${endpoint}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.403551" elapsed="0.001081"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:08.558793" level="INFO">GET Request : url=https://bms.startnow-fr.com/backend/api/dashboard/charts?building_id=1 
+ path_url=/backend/api/dashboard/charts?building_id=1 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzMSwiZXhwIjoxNzgzODEwMDMxLCJuYmYiOjE3ODM4MDk0MzEsImp0aSI6IlUxd055SGVYN1puODAxRFMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Jgwtz3vTAlcZeoo51i2Q0Q90DUshZKWq8Q8etfb6VBo', 'Cookie': 'refreshToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYm1zLnN0YXJ0bm93LWZyLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTc4MzgwOTQzNCwiZXhwIjoxNzg1MDE5MDM0LCJuYmYiOjE3ODM4MDk0MzQsImp0aSI6Im9hYVdqQmFub1JyU0FkMVkiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.y90RI1Fd8THL-cxAaQ9JC5OPRM4pt3CpgrTNgnWu7s4'} 
+ body=None 
+ </msg>
+<msg time="2026-07-11T23:37:08.559148" level="INFO">GET Response : url=https://bms.startnow-fr.com/backend/api/dashboard/charts?building_id=1 
+ status=200, reason=OK 
+ headers={'Server': 'openresty', 'Date': 'Sat, 11 Jul 2026 22:37:14 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache, private', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '50', 'Vary': 'Origin', 'X-Served-By': 'bms.startnow-fr.com'} 
+ body={"rent_collection":{"categories":[],"data":[]},"complaints_trend":{"categories":[],"data":[]},"funds_usage":{"categories":[],"data":[]},"units_per_floor":{"categories":["2F","3F"],"data":[3,3]},"user_distribution":{"labels":["Tenants","Owners","Admins","Employees"],"data":[12,4,1,6]},"funds_over_time":{"categories":[],"data":[]},"salaries_paid":{"categories":[],"data":[]},"complaints_by_type":{"categories":["plumbing failure"],"data":[1]},"complaints_by_type_tenant":{"categories":["plumbing failure"],"data":[1]},"assigned_fixed_complaints":{"categories":["Fixed Complaints"],"data":[0]},"assigned_unfixed_complaints":{"categories":["Unfixed Complaints"],"data":[0]}} 
+ </msg>
+<msg time="2026-07-11T23:37:08.559648" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${alias}</arg>
+<arg>${endpoint}</arg>
+<arg>headers=${headers}</arg>
+<arg>params=${params}</arg>
+<arg>timeout=${timeout}</arg>
+<arg>expected_status=ANY</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.404933" elapsed="0.154850"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.562260" level="INFO">${API_LAST_RESPONSE} = &lt;Response [200]&gt;</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.560542" elapsed="0.001929"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.565922" level="INFO">GET /dashboard/charts → 200</msg>
+<arg>GET ${endpoint} → ${response.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.562998" elapsed="0.003339"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-07-11T23:37:08.566733" elapsed="0.000150"/>
+</return>
+<arg>${DASHBOARD_ENDPOINT}</arg>
+<arg>headers=${headers}</arg>
+<arg>params=${params}</arg>
+<doc>Sends an HTTP GET request to the given endpoint.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.402184" elapsed="0.165331"/>
+</kw>
+<kw name="Validate Status Code" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.572607" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.570836" elapsed="0.001913"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.574602" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.573225" elapsed="0.001624"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.584641" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${target.status_code}</arg>
+<arg>${expected_status}</arg>
+<arg>Expected status code ${expected_status} but got ${target.status_code}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.575306" elapsed="0.009908"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.589900" level="INFO">Status code validated: 200</msg>
+<arg>Status code validated: ${target.status_code}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.586034" elapsed="0.004121"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:08.590418" elapsed="0.000135"/>
+</return>
+<arg>200</arg>
+<doc>Validates that the response status code matches the expected value.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.569082" elapsed="0.021977"/>
+</kw>
+<kw name="Validate Response Is JSON" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.610462" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.601992" elapsed="0.008734"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.614996" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.612792" elapsed="0.002585"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Set Variable" owner="BuiltIn">
+<arg>${target.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.624705" elapsed="0.005997"/>
+</kw>
+<msg time="2026-07-11T23:37:08.631231" level="INFO">${status} = PASS</msg>
+<msg time="2026-07-11T23:37:08.631536" level="INFO">${body} = {'rent_collection': {'categories': [], 'data': []}, 'complaints_trend': {'categories': [], 'data': []}, 'funds_usage': {'categories': [], 'data': []}, 'units_per_floor': {'categories': ['2F', '3F'], '...</msg>
+<var>${status}</var>
+<var>${body}</var>
+<arg>Set Variable</arg>
+<arg>${target.json()}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.620717" elapsed="0.010948"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>PASS</arg>
+<arg>Response body is not valid JSON: ${target.text}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.632252" elapsed="0.009412"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.644863" level="INFO">Response body is valid JSON</msg>
+<arg>Response body is valid JSON</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.643145" elapsed="0.002018"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:08.645457" elapsed="0.000159"/>
+</return>
+<doc>Validates that the response body is valid JSON.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.592932" elapsed="0.053285"/>
+</kw>
+<kw name="Validate Response Body Is Not Empty" owner="ApiValidation">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.649474" level="INFO">${target} = &lt;Response [200]&gt;</msg>
+<var>${target}</var>
+<arg>'${response}' == '${None}'</arg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${response}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.648312" elapsed="0.001252"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.650730" level="INFO">Argument types are:
+&lt;class 'requests.models.Response'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${target}</arg>
+<arg>${None}</arg>
+<arg>No response available. Pass a response or call a request keyword first.</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.649900" elapsed="0.001190"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.653249" level="INFO">Length is 672.</msg>
+<arg>${target.text}</arg>
+<arg>Response body is empty</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.651424" elapsed="0.001967"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.654420" level="INFO">Response body is not empty</msg>
+<arg>Response body is not empty</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.653704" elapsed="0.000845"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:08.654684" elapsed="0.000079"/>
+</return>
+<doc>Validates that the response body is not empty.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.647463" elapsed="0.007582"/>
+</kw>
+<doc>Verifies dashboard endpoint returns valid response.</doc>
+<tag>api</tag>
+<tag>validation</tag>
+<status status="PASS" start="2026-07-11T23:37:08.373535" elapsed="0.286725"/>
+</test>
+<kw name="Delete API Session" owner="ApiClient" type="TEARDOWN">
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Delete All Sessions" owner="RequestsLibrary">
+<msg time="2026-07-11T23:37:08.665566" level="INFO">Deleting All Sessions</msg>
+<doc>Removes all the session objects</doc>
+<status status="PASS" start="2026-07-11T23:37:08.665344" elapsed="0.000452"/>
+</kw>
+<arg>Delete All Sessions</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.664391" elapsed="0.001563"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.667256" level="INFO">${API_SESSION} = None</msg>
+<arg>${API_SESSION}</arg>
+<arg>${None}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.666291" elapsed="0.001095"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.668692" level="INFO">${API_LAST_RESPONSE} = None</msg>
+<arg>${API_LAST_RESPONSE}</arg>
+<arg>${None}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.667741" elapsed="0.001077"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-07-11T23:37:08.672067" level="INFO">API session 'api_session' deleted</msg>
+<arg>API session '${alias}' deleted</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.670468" elapsed="0.001776"/>
+</kw>
+<return>
+<value>${True}</value>
+<status status="PASS" start="2026-07-11T23:37:08.672423" elapsed="0.000094"/>
+</return>
+<doc>Deletes the active HTTP session and cleans up state.
+Should be called in test teardown to ensure proper cleanup.</doc>
+<status status="PASS" start="2026-07-11T23:37:08.663664" elapsed="0.009179"/>
+</kw>
+<doc>Test cases for ApiValidation keywords.</doc>
+<status status="PASS" start="2026-07-11T23:37:04.152963" elapsed="4.519998"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="9" fail="0" skip="0">api</stat>
+<stat pass="9" fail="0" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Test Api Validation" id="s1" pass="9" fail="0" skip="0">Test Api Validation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

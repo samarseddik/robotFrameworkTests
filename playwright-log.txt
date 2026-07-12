@@ -1,0 +1,55 @@
+{"level":30,"time":"2026-07-11T21:54:39.794Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Listening on 127.0.0.1:55927"}
+{"level":30,"time":"2026-07-11T21:54:40.052Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-07-11T21:54:40.492Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2026-07-11T21:54:40.493Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-07-11T21:54:40.493Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-07-11T21:54:40.521Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-07-11T21:54:40.522Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}}"}
+{"level":30,"time":"2026-07-11T21:54:40.522Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@f1542977d309eeebe042a8fcb3aec8e3\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=5165593b-b0c5-4036-ac25-5014219945f6\"}"}
+{"level":30,"time":"2026-07-11T21:54:40.522Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Trace file: "}
+{"level":30,"time":"2026-07-11T21:54:40.567Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Setting default timeout for context context=9c2900cb-a390-4dfd-bc53-f0b1c9dd11e4 to 30000"}
+{"level":30,"time":"2026-07-11T21:54:40.568Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active context: context=9c2900cb-a390-4dfd-bc53-f0b1c9dd11e4"}
+{"level":30,"time":"2026-07-11T21:54:40.568Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newContext"}
+{"level":30,"time":"2026-07-11T21:54:40.582Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-11T21:54:40.583Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@f1542977d309eeebe042a8fcb3aec8e3\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=9c2900cb-a390-4dfd-bc53-f0b1c9dd11e4\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@b3e1c4c962ef576e3852fbc3fb63b938\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=5165593b-b0c5-4036-ac25-5014219945f6\"}"}
+{"level":30,"time":"2026-07-11T21:54:41.331Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-11T21:54:41.331Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-11T21:54:41.404Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-11T21:54:41.414Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-11T21:54:41.415Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-11T21:54:41.910Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-11T21:54:41.924Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-11T21:54:41.943Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-11T21:54:41.950Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-07-11T21:54:55.299Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method goTo"}
+{"level":30,"time":"2026-07-11T21:54:55.311Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-11T21:54:55.311Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-11T21:54:55.410Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-11T21:54:55.434Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method evaluateJavascript"}
+{"level":30,"time":"2026-07-11T21:54:55.437Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Strict mode is enabled, find Locator with input[type=\"email\"] in page."}
+{"level":30,"time":"2026-07-11T21:55:12.928Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method evaluateJavascript"}
+{"level":30,"time":"2026-07-11T21:55:12.944Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method evaluateJavascript"}
+{"level":30,"time":"2026-07-11T21:55:12.945Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Strict mode is enabled, find Locator with input[type=\"email\"] in page."}
+{"level":30,"time":"2026-07-11T21:55:12.985Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method evaluateJavascript"}
+{"level":30,"time":"2026-07-11T21:55:13.020Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-11T21:55:13.031Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-11T21:55:13.070Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-07-11T21:55:13.103Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Removed page=7d5d39ae-0a8b-4698-91f3-5f258b07631e from context=9c2900cb-a390-4dfd-bc53-f0b1c9dd11e4 page stack"}
+{"level":30,"time":"2026-07-11T21:55:13.766Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeAllBrowsers"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2026-07-11T21:55:13.781Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-11T21:55:13.781Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-11T21:55:13.866Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-07-11T21:55:13.866Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeAllBrowsers"}

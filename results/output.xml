@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-06-30T12:09:46.151659" rpa="false" schemaversion="5">
+<suite id="s1" name="robotFrameworkTests" source="C:\Users\Lenovo\Desktop\robotFrameworkTests">
+<suite id="s1-s1" name="Logging" source="C:\Users\Lenovo\Desktop\robotFrameworkTests\logging">
+<suite id="s1-s1-s1" name="Test Execution Logger" source="C:\Users\Lenovo\Desktop\robotFrameworkTests\logging\test_execution_logger.robot">
+<kw name="Start Execution Logging" owner="ExecutionLogger" type="SETUP">
+<kw name="Create Log File" owner="FileLogger">
+<kw name="Get Log File Path" owner="FileLogger">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.383726" level="INFO">${full_path} = C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<var>${full_path}</var>
+<arg>${log_path}/${file_name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.382992" elapsed="0.000981"/>
+</kw>
+<return>
+<value>${full_path}</value>
+<status status="PASS" start="2026-06-30T12:09:46.384195" elapsed="0.000453"/>
+</return>
+<msg time="2026-06-30T12:09:46.385031" level="INFO">${full_path} = C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<var>${full_path}</var>
+<arg>${log_path}</arg>
+<arg>${file_name}</arg>
+<doc>Returns the full path of a log file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.382057" elapsed="0.003362"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>not os.path.exists('${log_path}')</arg>
+<arg>Create Directory</arg>
+<arg>${log_path}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.385945" elapsed="0.002564"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-30T12:09:46.389512" level="INFO">${timestamp} = 2026-06-30 12:09:46</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.388869" elapsed="0.000876"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.393062" level="INFO">${content} = ================================================
+Robot Framework Execution Log
+Created: 2026-06-30 12:09:46
+================================================
+</msg>
+<var>${content}</var>
+<arg>SEPARATOR=\n</arg>
+<arg>================================================</arg>
+<arg>${header}</arg>
+<arg>Created: ${timestamp}</arg>
+<arg>================================================\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.390290" elapsed="0.004518"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2026-06-30T12:09:46.397198" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\Lenovo\Desktop\robotFrameworkTests\logs\execution.log"&gt;C:\Users\Lenovo\Desktop\robotFrameworkTests\logs\execution.log&lt;/a&gt;'.</msg>
+<arg>${full_path}</arg>
+<arg>${content}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.395372" elapsed="0.002651"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.400005" level="INFO">Log file created: C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<arg>Log file created: ${full_path}</arg>
+<arg>level=INFO</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.398551" elapsed="0.002927"/>
+</kw>
+<return>
+<value>${full_path}</value>
+<status status="PASS" start="2026-06-30T12:09:46.401883" elapsed="0.000378"/>
+</return>
+<arg>${log_path}</arg>
+<arg>${file_name}</arg>
+<arg>Robot Framework Execution Log</arg>
+<doc>Creates a new log file with a header.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.381347" elapsed="0.021413"/>
+</kw>
+<kw name="Store Start Time" owner="ExecutionLogger">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-30T12:09:46.405773" level="INFO">${start_time} = 1782817786.405534</msg>
+<var>${start_time}</var>
+<arg>result_format=epoch</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.404618" elapsed="0.001800"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.408441" level="INFO">${EXECUTION_START_TIME} = 1782817786.405534</msg>
+<arg>${${variable_name}}</arg>
+<arg>${start_time}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.406894" elapsed="0.001836"/>
+</kw>
+<return>
+<value>${start_time}</value>
+<status status="PASS" start="2026-06-30T12:09:46.408929" elapsed="0.000346"/>
+</return>
+<doc>Stores the start time of an execution in a suite variable.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.403499" elapsed="0.006009"/>
+</kw>
+<kw name="Format Timestamp" owner="ExecutionLogger">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-30T12:09:46.413807" level="INFO">${timestamp} = 2026-06-30 12:09:46</msg>
+<var>${timestamp}</var>
+<arg>result_format=${format}</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.412712" elapsed="0.001357"/>
+</kw>
+<return>
+<value>${timestamp}</value>
+<status status="PASS" start="2026-06-30T12:09:46.414281" elapsed="0.000397"/>
+</return>
+<msg time="2026-06-30T12:09:46.414967" level="INFO">${timestamp} = 2026-06-30 12:09:46</msg>
+<var>${timestamp}</var>
+<doc>Returns current date and time as a formatted string.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.410108" elapsed="0.005353"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.417404" level="INFO">${message} = INFO | Execution logging started at 2026-06-30 12:09:46</msg>
+<var>${message}</var>
+<arg>INFO | Execution logging started at ${timestamp}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.416053" elapsed="0.001604"/>
+</kw>
+<kw name="Append To Log File" owner="FileLogger">
+<kw name="Get Log File Path" owner="FileLogger">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.420942" level="INFO">${full_path} = C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<var>${full_path}</var>
+<arg>${log_path}/${file_name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.420172" elapsed="0.000990"/>
+</kw>
+<return>
+<value>${full_path}</value>
+<status status="PASS" start="2026-06-30T12:09:46.421353" elapsed="0.000353"/>
+</return>
+<msg time="2026-06-30T12:09:46.421983" level="INFO">${full_path} = C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<var>${full_path}</var>
+<arg>${log_path}</arg>
+<arg>${file_name}</arg>
+<doc>Returns the full path of a log file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.419012" elapsed="0.003323"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-30T12:09:46.423675" level="INFO">${timestamp} = 2026-06-30 12:09:46</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.422737" elapsed="0.001545"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.426114" level="INFO">${line} = [2026-06-30 12:09:46] INFO | Execution logging started at 2026-06-30 12:09:46
+</msg>
+<var>${line}</var>
+<arg>[${timestamp}] ${message}\n</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.424829" elapsed="0.001737"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-06-30T12:09:46.428644" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\Desktop\robotFrameworkTests\logs\execution.log"&gt;C:\Users\Lenovo\Desktop\robotFrameworkTests\logs\execution.log&lt;/a&gt;'.</msg>
+<arg>${full_path}</arg>
+<arg>${line}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.426940" elapsed="0.002260"/>
+</kw>
+<arg>${log_path}</arg>
+<arg>${file_name}</arg>
+<arg>${message}</arg>
+<doc>Appends a line to an existing log file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.418024" elapsed="0.011470"/>
+</kw>
+<return>
+<value>${file_name}</value>
+<status status="PASS" start="2026-06-30T12:09:46.429708" elapsed="0.000767"/>
+</return>
+<arg>${LOG_PATH}</arg>
+<doc>Initializes the execution log file and stores start time.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.380201" elapsed="0.051030"/>
+</kw>
+<test id="s1-s1-s1-t1" name="TC-EL-012 Log Test Setup Start And End" line="93">
+<kw name="Log Test Setup Start" owner="ExecutionLogger">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.440668" level="INFO">${message} = TEST SETUP START | TC-EL-012 Log Test Setup Start And End</msg>
+<var>${message}</var>
+<arg>TEST SETUP START | ${test_name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.439881" elapsed="0.001005"/>
+</kw>
+<kw name="Append To Log File" owner="FileLogger">
+<kw name="Get Log File Path" owner="FileLogger">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.444501" level="INFO">${full_path} = C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<var>${full_path}</var>
+<arg>${log_path}/${file_name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.443236" elapsed="0.001751"/>
+</kw>
+<return>
+<value>${full_path}</value>
+<status status="PASS" start="2026-06-30T12:09:46.445207" elapsed="0.000344"/>
+</return>
+<msg time="2026-06-30T12:09:46.445858" level="INFO">${full_path} = C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<var>${full_path}</var>
+<arg>${log_path}</arg>
+<arg>${file_name}</arg>
+<doc>Returns the full path of a log file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.442129" elapsed="0.004354"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-30T12:09:46.447956" level="INFO">${timestamp} = 2026-06-30 12:09:46</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.447027" elapsed="0.001220"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.449924" level="INFO">${line} = [2026-06-30 12:09:46] TEST SETUP START | TC-EL-012 Log Test Setup Start And End
+</msg>
+<var>${line}</var>
+<arg>[${timestamp}] ${message}\n</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.448717" elapsed="0.001726"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-06-30T12:09:46.453479" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\Desktop\robotFrameworkTests\logs\execution.log"&gt;C:\Users\Lenovo\Desktop\robotFrameworkTests\logs\execution.log&lt;/a&gt;'.</msg>
+<arg>${full_path}</arg>
+<arg>${line}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.450926" elapsed="0.003879"/>
+</kw>
+<arg>${log_path}</arg>
+<arg>${file_name}</arg>
+<arg>${message}</arg>
+<doc>Appends a line to an existing log file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.441197" elapsed="0.014531"/>
+</kw>
+<arg>${LOG_PATH}</arg>
+<arg>${LOG_FILE}</arg>
+<doc>Logs the start of a test setup.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.438685" elapsed="0.018406"/>
+</kw>
+<kw name="Log Test Setup End" owner="ExecutionLogger">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.461722" level="INFO">${message} = TEST SETUP END | TC-EL-012 Log Test Setup Start And End</msg>
+<var>${message}</var>
+<arg>TEST SETUP END | ${test_name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.460240" elapsed="0.001769"/>
+</kw>
+<kw name="Append To Log File" owner="FileLogger">
+<kw name="Get Log File Path" owner="FileLogger">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.465126" level="INFO">${full_path} = C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<var>${full_path}</var>
+<arg>${log_path}/${file_name}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.464387" elapsed="0.000943"/>
+</kw>
+<return>
+<value>${full_path}</value>
+<status status="PASS" start="2026-06-30T12:09:46.465519" elapsed="0.000280"/>
+</return>
+<msg time="2026-06-30T12:09:46.466055" level="INFO">${full_path} = C:/Users/Lenovo/Desktop/robotFrameworkTests/logs/execution.log</msg>
+<var>${full_path}</var>
+<arg>${log_path}</arg>
+<arg>${file_name}</arg>
+<doc>Returns the full path of a log file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.463272" elapsed="0.003090"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-30T12:09:46.467687" level="INFO">${timestamp} = 2026-06-30 12:09:46</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y-%m-%d %H:%M:%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.466737" elapsed="0.001245"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-30T12:09:46.473416" level="INFO">${line} = [2026-06-30 12:09:46] TEST SETUP END | TC-EL-012 Log Test Setup Start And End
+</msg>
+<var>${line}</var>
+<arg>[${timestamp}] ${message}\n</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.468485" elapsed="0.005302"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-06-30T12:09:46.475351" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\Lenovo\Desktop\robotFrameworkTests\logs\execution.log"&gt;C:\Users\Lenovo\Desktop\robotFrameworkTests\logs\execution.log&lt;/a&gt;'.</msg>
+<arg>${full_path}</arg>
+<arg>${line}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.474077" elapsed="0.001799"/>
+</kw>
+<arg>${log_path}</arg>
+<arg>${file_name}</arg>
+<arg>${message}</arg>
+<doc>Appends a line to an existing log file.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.462371" elapsed="0.014042"/>
+</kw>
+<arg>${LOG_PATH}</arg>
+<arg>${LOG_FILE}</arg>
+<doc>Logs the end of a test setup.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.458920" elapsed="0.017937"/>
+</kw>
+<doc>Verifies test setup start and end are logged.</doc>
+<tag>execution-logger</tag>
+<tag>test</tag>
+<status status="PASS" start="2026-06-30T12:09:46.431525" elapsed="0.047879"/>
+</test>
+<doc>Test cases for ExecutionLogger keywords.</doc>
+<status status="PASS" start="2026-06-30T12:09:46.231268" elapsed="0.256031"/>
+</suite>
+<status status="PASS" start="2026-06-30T12:09:46.218868" elapsed="0.283025"/>
+</suite>
+<status status="PASS" start="2026-06-30T12:09:46.161687" elapsed="0.346467"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">execution-logger</stat>
+<stat pass="1" fail="0" skip="0">test</stat>
+</tag>
+<suite>
+<stat name="robotFrameworkTests" id="s1" pass="1" fail="0" skip="0">robotFrameworkTests</stat>
+<stat name="Logging" id="s1-s1" pass="1" fail="0" skip="0">robotFrameworkTests.Logging</stat>
+<stat name="Test Execution Logger" id="s1-s1-s1" pass="1" fail="0" skip="0">robotFrameworkTests.Logging.Test Execution Logger</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
