@@ -1,0 +1,51 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout test repository
+        uses: actions/checkout@v4
+
+      - name: Checkout keyword library
+        uses: actions/checkout@v4
+        with:
+          repository: samarseddik/robotFrameworkKeywords
+          path: robotFrameworkKeywords
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install robotframework
+          pip install robotframework-requests
+          pip install -e robotFrameworkKeywords/
+
+      - name: Run Logging Tests
+        run: |
+          robot --outputdir results/logging \
+                --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
+                logging/
+
+      - name: Run API Tests
+        run: |
+          robot --outputdir results/api \
+                --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
+                api/
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: robot-framework-results
+          path: results/
