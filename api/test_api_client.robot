@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Test cases for ApiClient keywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/api/ApiClient.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/api/ApiConfig.robot
+Resource    ${KEYWORDS_PATH}/api/ApiClient.robot
+Resource    ${KEYWORDS_PATH}/api/ApiConfig.robot
 Suite Setup      Create API Session    ${BASE_URL}
 Suite Teardown   Delete API Session
 

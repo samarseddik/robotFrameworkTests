@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Test cases for ApiConfig keywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/api/ApiConfig.robot
+Resource    ${KEYWORDS_PATH}/api/ApiConfig.robot
 Suite Teardown   Reset API Configuration
 
 *** Test Cases ***
