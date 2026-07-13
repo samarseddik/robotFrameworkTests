@@ -1,4 +1,4 @@
-name: Robot Framework Tests
+name: Robot Framework - Keyword Driven Testing Strategy
 
 on:
   push:
@@ -7,7 +7,51 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test:
+  # ============================================================
+  # JOB 1 - LOGGING TESTS (no dependencies)
+  # ============================================================
+  logging-tests:
+    name: Logging Keywords Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout test repository
+        uses: actions/checkout@v4
+
+      - name: Checkout keyword library
+        uses: actions/checkout@v4
+        with:
+          repository: samarseddik/robotFrameworkKeywords
+          path: robotFrameworkKeywords
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install robotframework
+          pip install -e robotFrameworkKeywords/
+
+      - name: Run Logging Tests
+        run: |
+          robot --outputdir results/logging \
+                --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
+                logging/
+
+      - name: Upload Logging Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: logging-results
+          path: results/logging/
+
+  # ============================================================
+  # JOB 2 - API TESTS (no dependencies)
+  # ============================================================
+  api-tests:
+    name: API Keywords Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -31,21 +75,185 @@ jobs:
           pip install robotframework-requests
           pip install -e robotFrameworkKeywords/
 
-      - name: Run Logging Tests
-        run: |
-          robot --outputdir results/logging \
-                --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
-                logging/
-
       - name: Run API Tests
         run: |
           robot --outputdir results/api \
                 --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 api/
 
-      - name: Upload Test Results
+      - name: Upload API Results
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: robot-framework-results
-          path: results/
+          name: api-results
+          path: results/api/
+
+  # ============================================================
+  # JOB 3 - DATABASE TESTS (needs MySQL)
+  # ============================================================
+  database-tests:
+    name: Database Keywords Tests
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_DATABASE: bms
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - name: Checkout test repository
+        uses: actions/checkout@v4
+
+      - name: Checkout keyword library
+        uses: actions/checkout@v4
+        with:
+          repository: samarseddik/robotFrameworkKeywords
+          path: robotFrameworkKeywords
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install robotframework
+          pip install robotframework-databaselibrary
+          pip install mysql-connector-python
+          pip install -e robotFrameworkKeywords/
+
+      - name: Wait for MySQL
+        run: |
+          until mysqladmin ping -h 127.0.0.1 --silent; do
+            echo 'Waiting for MySQL...'
+            sleep 2
+          done
+
+      - name: Create test tables and seed data
+        run: |
+          mysql -h 127.0.0.1 -u root bms << 'EOF'
+          CREATE TABLE IF NOT EXISTS buildings (
+            building_id INT AUTO_INCREMENT PRIMARY KEY,
+            building_name VARCHAR(100)
+          );
+          CREATE TABLE IF NOT EXISTS users (
+            user_id INT AUTO_INCREMENT PRIMARY KEY,
+            building_id INT DEFAULT 1,
+            user_type VARCHAR(1),
+            user_role INT DEFAULT 0,
+            user_name VARCHAR(100),
+            email VARCHAR(255),
+            user_tel VARCHAR(20),
+            password VARCHAR(255)
+          );
+          INSERT INTO buildings (building_name) VALUES ('Building 1');
+          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (1, 1, 'S', 1, 'StartNow', 'superAdmin@start-now.fr', '+21699123456', 'hashed');
+          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (2, 1, 'O', 1, 'Mouhamed', 'mouhamed@start-now.fr', '+21699123456', 'hashed');
+          EOF
+          
+      - name: Run Database Tests
+        run: |
+          robot --outputdir results/database \
+                --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
+                --variable DB_HOST:127.0.0.1 \
+                --variable DB_PORT:3306 \
+                --variable DB_NAME:bms \
+                --variable DB_USER:root \
+                --variable DB_PASSWORD:${EMPTY} \
+                --variable DB_DRIVER:mysql \
+                database/
+
+      - name: Upload Database Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: database-results
+          path: results/database/
+
+  # ============================================================
+  # JOB 4 - UI TESTS (needs Browser/Playwright)
+  # ============================================================
+  ui-tests:
+    name: UI Keywords Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout test repository
+        uses: actions/checkout@v4
+
+      - name: Checkout keyword library
+        uses: actions/checkout@v4
+        with:
+          repository: samarseddik/robotFrameworkKeywords
+          path: robotFrameworkKeywords
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install robotframework
+          pip install robotframework-browser
+          pip install -e robotFrameworkKeywords/
+
+      - name: Initialize Browser Library
+        run: rfbrowser init
+
+      - name: Run UI Tests
+        run: |
+          robot --outputdir results/ui \
+                --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
+                --variable HEADLESS:True \
+                ui/
+
+      - name: Upload UI Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ui-results
+          path: results/ui/
+
+  # ============================================================
+  # JOB 5 - GENERATE ALLURE REPORT
+  # ============================================================
+  generate-report:
+    name: Generate Allure Report
+    runs-on: ubuntu-latest
+    needs: [ logging-tests, api-tests, database-tests, ui-tests ]
+    if: always()
+
+    steps:
+      - name: Checkout test repository
+        uses: actions/checkout@v4
+
+      - name: Download all results
+        uses: actions/download-artifact@v4
+        with:
+          path: all-results/
+
+      - name: Install Allure
+        run: |
+          pip install allure-robotframework
+          npm install -g allure-commandline
+
+      - name: Generate Allure Report
+        run: |
+          allure generate all-results/ -o allure-report --clean
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/
