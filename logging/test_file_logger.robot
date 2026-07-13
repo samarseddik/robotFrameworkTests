@@ -2,10 +2,7 @@
 Documentation    Test cases for FileLogger keywords.
 Resource    ${KEYWORDS_PATH}/logging/FileLogger.robot
 Resource    ${KEYWORDS_PATH}/logging/ExecutionLogger.robot
-Suite Teardown   Run Keywords
-...    Stop Execution Logging    ${LOG_PATH}    AND
-...    Sleep    1s    AND
-...    Remove Directory    ${LOG_PATH}    recursive=True
+Suite Teardown   Remove Directory    ${LOG_PATH}    recursive=True
 
 
 *** Variables ***
