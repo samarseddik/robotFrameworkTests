@@ -79,7 +79,7 @@ jobs:
       - name: Run API Tests
         run: |
           robot --outputdir results/api \
-                --listener allure_robotframework:results/api/allure-results
+                --listener allure_robotframework:results/api/allure-results \
                 --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 api/
 
@@ -166,7 +166,7 @@ jobs:
       - name: Run Database Tests
         run: |
           robot --outputdir results/database \
-                --listener allure_robotframework:results/database/allure-results
+                --listener allure_robotframework:results/database/allure-results \
                 --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 --variable DB_HOST:127.0.0.1 \
                 --variable DB_PORT:3306 \
@@ -217,7 +217,7 @@ jobs:
       - name: Run UI Tests
         run: |
           robot --outputdir results/ui \
-                --listener allure_robotframework:results/ui/allure-results
+                --listener allure_robotframework:results/ui/allure-results \
                 --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 --variable HEADLESS:True \
                 ui/
