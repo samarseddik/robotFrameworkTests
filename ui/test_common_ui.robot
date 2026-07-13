@@ -10,8 +10,7 @@ Test Setup       Open New Page    ${URL}
 ${URL}              https://bms.startnow-fr.com
 ${BROWSER}          chromium
 ${HEADLESS}         False
-${SCREENSHOT_PATH}  C:/Users/Lenovo/Desktop/robotFrameworkTests/screenshots
-
+${SCREENSHOT_PATH}  ${OUTPUTDIR}/screenshots
 *** Test Cases ***
 TC-UI-001 Open Browser Session
     [Documentation]    Verifies that a browser session opens successfully.
