@@ -32,11 +32,13 @@ jobs:
       - name: Install dependencies
         run: |
           pip install robotframework
+          pip install allure-robotframework
           pip install -e robotFrameworkKeywords/
 
       - name: Run Logging Tests
         run: |
           robot --outputdir results/logging \
+                --listener allure_robotframework:results/logging/allure-results \
                 --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 logging/
 
@@ -73,11 +75,13 @@ jobs:
         run: |
           pip install robotframework
           pip install robotframework-requests
+          pip install allure-robotframework
           pip install -e robotFrameworkKeywords/
 
       - name: Run API Tests
         run: |
           robot --outputdir results/api \
+                --listener allure_robotframework:results/api/allure-results \
                 --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 api/
 
@@ -130,6 +134,7 @@ jobs:
           pip install robotframework
           pip install robotframework-databaselibrary
           pip install mysql-connector-python
+          pip install allure-robotframework
           pip install -e robotFrameworkKeywords/
 
       - name: Wait for MySQL
@@ -139,13 +144,9 @@ jobs:
             sleep 2
           done
 
-      - name: Create test tables and seed data
+      - name: Create test tables
         run: |
           mysql -h 127.0.0.1 -u root bms << 'EOF'
-          CREATE TABLE IF NOT EXISTS buildings (
-            building_id INT AUTO_INCREMENT PRIMARY KEY,
-            building_name VARCHAR(100)
-          );
           CREATE TABLE IF NOT EXISTS users (
             user_id INT AUTO_INCREMENT PRIMARY KEY,
             building_id INT DEFAULT 1,
@@ -156,14 +157,17 @@ jobs:
             user_tel VARCHAR(20),
             password VARCHAR(255)
           );
+          CREATE TABLE IF NOT EXISTS buildings (
+            building_id INT AUTO_INCREMENT PRIMARY KEY,
+            building_name VARCHAR(100)
+          );
           INSERT INTO buildings (building_name) VALUES ('Building 1');
-          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (1, 1, 'S', 1, 'StartNow', 'superAdmin@start-now.fr', '+21699123456', 'hashed');
-          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (2, 1, 'O', 1, 'Mouhamed', 'mouhamed@start-now.fr', '+21699123456', 'hashed');
           EOF
-          
+
       - name: Run Database Tests
         run: |
           robot --outputdir results/database \
+                --listener allure_robotframework:results/database/allure-results \
                 --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 --variable DB_HOST:127.0.0.1 \
                 --variable DB_PORT:3306 \
@@ -206,6 +210,7 @@ jobs:
         run: |
           pip install robotframework
           pip install robotframework-browser
+          pip install allure-robotframework
           pip install -e robotFrameworkKeywords/
 
       - name: Initialize Browser Library
@@ -214,6 +219,7 @@ jobs:
       - name: Run UI Tests
         run: |
           robot --outputdir results/ui \
+                --listener allure_robotframework:results/ui/allure-results \
                 --variable KEYWORDS_PATH:${GITHUB_WORKSPACE}/robotFrameworkKeywords/keywords \
                 --variable HEADLESS:True \
                 ui/
