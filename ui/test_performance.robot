@@ -15,7 +15,7 @@ ${MAX_LOAD_TIME}        10000
 ${SLOW_THRESHOLD}       2000
 
 *** Test Cases ***
-TC-PERF-001 Get Page Load Time
+TC-PERF-001 Get Page Load Time    
     [Documentation]    Verifies that page load time is returned correctly.
     [Tags]             performance    metrics
     ${load_time}=    Get Page Load Time
