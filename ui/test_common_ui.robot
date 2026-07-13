@@ -49,7 +49,8 @@ TC-UI-006 Get Browser Version
     [Documentation]    Verifies that browser version is returned.
     [Tags]             common-ui    browser
     ${version}=    Get Browser Version
-    Should Not Be Empty    ${version}
+    Should Not Be Equal    ${version}    ${None}
+    Log    Browser version: ${version}
 
 TC-UI-007 Get Browser Cookies
     [Documentation]    Verifies that cookies are retrieved from the browser.

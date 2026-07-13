@@ -23,8 +23,7 @@ ${WRONG_EMAIL}          wrong@email.com
 ${WRONG_PASSWORD}       wrongpassword
 ${ERROR_SELECTOR}       .chakra-alert
 ${DASHBOARD_SELECTOR}   .chakra-button.css-4vyskk
-${SCREENSHOT_PATH}    C:/Users/Lenovo/Desktop/robotFrameworkTests/screenshots
-
+${SCREENSHOT_PATH}      ${OUTPUTDIR}/screenshots
 *** Test Cases ***
 TC-FORM-001 Fill Form Field
     [Documentation]    Verifies that a form field can be filled.
@@ -135,7 +134,6 @@ TC-FORM-015 Verify Login Success
     Sleep    3s
     Take Page Screenshot    ${SCREENSHOT_PATH}    after_submit.png
     Verify URL Contains    dashboard
-
 TC-FORM-016 Verify Login Failure
     [Documentation]    Verifies that wrong credentials show error message.
     [Tags]             form    login
