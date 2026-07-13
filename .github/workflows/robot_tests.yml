@@ -253,7 +253,13 @@ jobs:
         run: |
           pip install allure-robotframework
           npm install -g allure-commandline
-
+          
+      - name: Show downloaded files
+        run: |
+          find all-results -type d
+          echo "======================"
+          find all-results -type f | head -200
+          
       - name: Generate Allure Report
         run: |
           allure generate all-results/ -o allure-report --clean
