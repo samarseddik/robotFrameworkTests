@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Test cases for CommonUI keywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/CommonUI.robot
+Resource    ${KEYWORDS_PATH}/ui/CommonUI.robot
 Library          Browser
 Suite Setup      Configure Browser Options
 Suite Teardown   Close All Browser Sessions

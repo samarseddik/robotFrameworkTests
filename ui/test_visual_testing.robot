@@ -13,8 +13,8 @@ ${BROWSER}              chromium
 ${HEADLESS}             False
 ${EMAIL_SELECTOR}       input[type="email"]
 ${SUBMIT_SELECTOR}      button[type="submit"]
-${SCREENSHOT_PATH}      C:/Users/Lenovo/Desktop/robotFrameworkTests/screenshots
-${BASELINE_PATH}        C:/Users/Lenovo/Desktop/robotFrameworkTests/baseline
+${SCREENSHOT_PATH}      ${OUTPUTDIR}/screenshots
+${BASELINE_PATH}        ${OUTPUTDIR}/baseline
 
 *** Test Cases ***
 TC-VIS-001 Take Full Page Screenshot
