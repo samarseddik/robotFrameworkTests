@@ -139,9 +139,13 @@ jobs:
             sleep 2
           done
 
-      - name: Create test tables
+      - name: Create test tables and seed data
         run: |
           mysql -h 127.0.0.1 -u root bms << 'EOF'
+          CREATE TABLE IF NOT EXISTS buildings (
+            building_id INT AUTO_INCREMENT PRIMARY KEY,
+            building_name VARCHAR(100)
+          );
           CREATE TABLE IF NOT EXISTS users (
             user_id INT AUTO_INCREMENT PRIMARY KEY,
             building_id INT DEFAULT 1,
@@ -152,13 +156,11 @@ jobs:
             user_tel VARCHAR(20),
             password VARCHAR(255)
           );
-          CREATE TABLE IF NOT EXISTS buildings (
-            building_id INT AUTO_INCREMENT PRIMARY KEY,
-            building_name VARCHAR(100)
-          );
           INSERT INTO buildings (building_name) VALUES ('Building 1');
+          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (1, 1, 'S', 1, 'StartNow', 'superAdmin@start-now.fr', '+21699123456', 'hashed');
+          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (2, 1, 'O', 1, 'Mouhamed', 'mouhamed@start-now.fr', '+21699123456', 'hashed');
           EOF
-
+          
       - name: Run Database Tests
         run: |
           robot --outputdir results/database \
