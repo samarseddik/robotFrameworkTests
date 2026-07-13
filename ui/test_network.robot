@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation    Test cases for NetworkKeywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/CommonUI.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/NavigationKeywords.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/FormKeywords.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/NetworkKeywords.robot
+Resource         ${KEYWORDS_PATH}/ui/CommonUI.robot
+Resource         ${KEYWORDS_PATH}/ui/NavigationKeywords.robot
+Resource         ${KEYWORDS_PATH}/ui/FormKeywords.robot
+Resource         ${KEYWORDS_PATH}/ui/NetworkKeywords.robot
 Suite Setup      Configure Browser Options
 Suite Teardown   Close All Browser Sessions
 Test Setup       Run Keywords

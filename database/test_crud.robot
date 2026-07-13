@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Test cases for CRUD operation keywords.
-Resource    C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/database/DatabaseConnection.robot
-Resource    C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/database/DatabaseCRUD.robot
+Resource    ${KEYWORDS_PATH}/database/DatabaseConnection.robot
+Resource    ${KEYWORDS_PATH}/database/DatabaseCRUD.robot
 Suite Setup      Connect To Database With Config
 Suite Teardown   Disconnect From Database
 *** Variables ***

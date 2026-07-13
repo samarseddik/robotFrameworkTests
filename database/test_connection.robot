@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Test cases for database connection keywords.
-Resource    C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/database/DatabaseConnection.robot
+Resource    ${KEYWORDS_PATH}/database/DatabaseConnection.robot
+
 
 *** Variables ***
 ${DB_HOST}        localhost

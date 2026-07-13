@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Test cases for NavigationKeywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/CommonUI.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/NavigationKeywords.robot
+Resource    ${KEYWORDS_PATH}/ui/CommonUI.robot
+Resource    ${KEYWORDS_PATH}/ui/NavigationKeywords.robot
 Suite Setup      Configure Browser Options
 Suite Teardown   Close All Browser Sessions
 Test Setup       Navigate To URL    ${URL}

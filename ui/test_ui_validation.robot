@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation    Test cases for ValidationKeywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/CommonUI.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/NavigationKeywords.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/FormKeywords.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/ValidationKeywords.robot
+Resource         ${KEYWORDS_PATH}/ui/CommonUI.robot
+Resource         ${KEYWORDS_PATH}/ui/NavigationKeywords.robot
+Resource         ${KEYWORDS_PATH}/ui/FormKeywords.robot
+Resource         ${KEYWORDS_PATH}/ui/ValidationKeywords.robot
 Suite Setup      Configure Browser Options
 Suite Teardown   Close All Browser Sessions
 Test Setup       Run Keywords

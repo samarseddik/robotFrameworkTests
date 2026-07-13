@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation    Test cases for test data management keywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/database/DatabaseConnection.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/database/DatabaseCRUD.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/database/DatabaseValidation.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/database/DatabaseSetup.robot
+Resource         ${KEYWORDS_PATH}/database/DatabaseConnection.robot
+Resource         ${KEYWORDS_PATH}/database/DatabaseCRUD.robot
+Resource         ${KEYWORDS_PATH}/database/DatabaseValidation.robot
+Resource         ${KEYWORDS_PATH}/database/DatabaseSetup.robot
 Suite Setup      Connect To Database With Config
 Suite Teardown   Disconnect From Database
 

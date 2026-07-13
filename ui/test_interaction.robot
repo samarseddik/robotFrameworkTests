@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation    Test cases for InteractionKeywords.
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/CommonUI.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/NavigationKeywords.robot
-Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/InteractionKeywords.robot
+Resource    ${KEYWORDS_PATH}/ui/CommonUI.robot
+Resource    ${KEYWORDS_PATH}/ui/NavigationKeywords.robot
+Resource    ${KEYWORDS_PATH}/ui/InteractionKeywords.robot
 Suite Setup      Configure Browser Options
 Suite Teardown   Close All Browser Sessions
 Test Setup    Run Keywords
