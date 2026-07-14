@@ -253,13 +253,7 @@ jobs:
         run: |
           pip install allure-robotframework
           npm install -g allure-commandline
-          
-      - name: Show downloaded files
-        run: |
-          find all-results -type d
-          echo "======================"
-          find all-results -type f | head -200
-          
+
       - name: Generate Allure Report
         run: |
           allure generate \
@@ -268,3 +262,9 @@ jobs:
             all-results/database-results/allure-results \
             all-results/ui-results/allure-results \
             -o allure-report --clean
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/
