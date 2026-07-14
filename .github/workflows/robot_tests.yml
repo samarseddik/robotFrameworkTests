@@ -256,10 +256,9 @@ jobs:
 
       - name: Generate Allure Report
         run: |
-          allure generate all-results/ -o allure-report --clean
-
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: allure-report/
+          allure generate \
+            all-results/logging-results/allure-results \
+            all-results/api-results/allure-results \
+            all-results/database-results/allure-results \
+            all-results/ui-results/allure-results \
+            -o allure-report --clean
