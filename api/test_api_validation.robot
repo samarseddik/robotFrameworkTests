@@ -3,6 +3,9 @@ Documentation    Test cases for ApiValidation keywords.
 Resource    ${KEYWORDS_PATH}/api/ApiClient.robot
 Resource    ${KEYWORDS_PATH}/api/ApiAuth.robot
 Resource    ${KEYWORDS_PATH}/api/ApiValidation.robot
+Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/api/ApiClient.robot
+Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/api/ApiAuth.robot
+Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/api/ApiValidation.robot
 Suite Setup      Run Keywords
 ...    Create API Session    ${BASE_URL}    AND
 ...    Login And Set Token

@@ -2,6 +2,9 @@
 Documentation    Test cases for ExecutionLogger keywords.
 Resource    ${KEYWORDS_PATH}/logging/FileLogger.robot
 Resource    ${KEYWORDS_PATH}/logging/ExecutionLogger.robot
+Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/logging/FileLogger.robot
+Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/logging/ExecutionLogger.robot
+
 Suite Setup      Start Execution Logging    ${LOG_PATH}
 Suite Teardown   Run Keywords
 ...    Stop Execution Logging    ${LOG_PATH}    AND

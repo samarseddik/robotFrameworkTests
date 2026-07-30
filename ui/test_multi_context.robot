@@ -3,6 +3,9 @@ Documentation    Test cases for MultiContextKeywords.
 Resource    ${KEYWORDS_PATH}/ui/CommonUI.robot
 Resource    ${KEYWORDS_PATH}/ui/NavigationKeywords.robot
 Resource    ${KEYWORDS_PATH}/ui/MultiContextKeywords.robot
+Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/CommonUI.robot
+Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/MultiContextKeywords.robot
+Resource         C:/Users/Lenovo/Desktop/robotFrameworkKeywords/keywords/ui/NavigationKeywords.robot
 Suite Setup      Open Browser Session
 Suite Teardown   Close All Browser Sessions
 

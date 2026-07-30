@@ -1,41 +1,342 @@
-{"level":30,"time":"2026-07-11T21:54:39.794Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Listening on 127.0.0.1:55927"}
-{"level":30,"time":"2026-07-11T21:54:40.052Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-07-11T21:54:40.492Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
-{"level":30,"time":"2026-07-11T21:54:40.493Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-07-11T21:54:40.493Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-07-11T21:54:40.521Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newContext"}
-{"level":30,"time":"2026-07-11T21:54:40.522Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}}"}
-{"level":30,"time":"2026-07-11T21:54:40.522Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@f1542977d309eeebe042a8fcb3aec8e3\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=5165593b-b0c5-4036-ac25-5014219945f6\"}"}
-{"level":30,"time":"2026-07-11T21:54:40.522Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Trace file: "}
-{"level":30,"time":"2026-07-11T21:54:40.567Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Setting default timeout for context context=9c2900cb-a390-4dfd-bc53-f0b1c9dd11e4 to 30000"}
-{"level":30,"time":"2026-07-11T21:54:40.568Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active context: context=9c2900cb-a390-4dfd-bc53-f0b1c9dd11e4"}
-{"level":30,"time":"2026-07-11T21:54:40.568Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newContext"}
-{"level":30,"time":"2026-07-11T21:54:40.582Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-07-11T21:54:40.583Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@f1542977d309eeebe042a8fcb3aec8e3\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=9c2900cb-a390-4dfd-bc53-f0b1c9dd11e4\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@b3e1c4c962ef576e3852fbc3fb63b938\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=5165593b-b0c5-4036-ac25-5014219945f6\"}"}
-{"level":30,"time":"2026-07-11T21:54:41.331Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
-{"level":30,"time":"2026-07-11T21:54:41.331Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
-{"level":30,"time":"2026-07-11T21:54:41.404Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
-{"level":30,"time":"2026-07-11T21:54:41.414Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-07-11T21:54:41.415Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
-{"level":30,"time":"2026-07-11T21:54:41.910Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-07-11T21:54:41.924Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-07-11T21:54:41.943Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-07-11T21:54:41.950Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method goTo"}
-{"level":30,"time":"2026-07-11T21:54:55.299Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method goTo"}
-{"level":30,"time":"2026-07-11T21:54:55.311Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-07-11T21:54:55.311Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
-{"level":30,"time":"2026-07-11T21:54:55.410Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
-{"level":30,"time":"2026-07-11T21:54:55.434Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method evaluateJavascript"}
-{"level":30,"time":"2026-07-11T21:54:55.437Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Strict mode is enabled, find Locator with input[type=\"email\"] in page."}
-{"level":30,"time":"2026-07-11T21:55:12.928Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method evaluateJavascript"}
-{"level":30,"time":"2026-07-11T21:55:12.944Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method evaluateJavascript"}
-{"level":30,"time":"2026-07-11T21:55:12.945Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Strict mode is enabled, find Locator with input[type=\"email\"] in page."}
-{"level":30,"time":"2026-07-11T21:55:12.985Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method evaluateJavascript"}
-{"level":30,"time":"2026-07-11T21:55:13.020Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-07-11T21:55:13.031Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-07-11T21:55:13.070Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2026-07-11T21:55:13.103Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Removed page=7d5d39ae-0a8b-4698-91f3-5f258b07631e from context=9c2900cb-a390-4dfd-bc53-f0b1c9dd11e4 page stack"}
-{"level":30,"time":"2026-07-11T21:55:13.766Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2026-07-27T12:05:03.671Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Listening on 127.0.0.1:61421"}
+{"level":30,"time":"2026-07-27T12:05:03.983Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-07-27T12:05:06.194Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2026-07-27T12:05:06.199Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-07-27T12:05:06.199Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-07-27T12:05:06.236Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-07-27T12:05:06.236Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}}"}
+{"level":30,"time":"2026-07-27T12:05:06.237Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:06.237Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Trace file: "}
+{"level":30,"time":"2026-07-27T12:05:06.318Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Setting default timeout for context context=85ae9d79-dfab-42d4-8059-fdbe14b70426 to 30000"}
+{"level":30,"time":"2026-07-27T12:05:06.318Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active context: context=85ae9d79-dfab-42d4-8059-fdbe14b70426"}
+{"level":30,"time":"2026-07-27T12:05:06.319Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newContext"}
+{"level":30,"time":"2026-07-27T12:05:06.345Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:06.346Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:07.126Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:07.126Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:07.167Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:07.180Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:07.180Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:07.670Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:07.677Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:07.694Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:07.705Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:07.707Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:07.790Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:07.791Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:16.006Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:16.022Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:16.023Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:16.214Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:16.240Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-07-27T12:05:16.241Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-07-27T12:05:16.272Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:16.284Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:16.288Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:16.316Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:16.319Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:16.320Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:16.338Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:16.352Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:16.360Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:16.370Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:16.371Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:16.818Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:16.818Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:17.591Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:17.602Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:17.602Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:17.741Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:17.758Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:17.758Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}},{\"id\":\"page=c68b600d-b586-4d61-9f11-8cb55891f1cd\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@ce5064820b5793669bafb67672d37568\"},\"timestamp\":1785153916.818,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:17.856Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:17.856Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:18.564Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:18.576Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:18.576Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:18.746Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:18.830Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.846Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.850Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.864Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.867Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.876Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.881Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changing current active page: page=c68b600d-b586-4d61-9f11-8cb55891f1cd"}
+{"level":30,"time":"2026-07-27T12:05:18.881Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:18.899Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:18.900Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:18.927Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:18.937Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.946Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.960Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.966Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:18.970Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:18.970Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:18.998Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:19.012Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:19.019Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:19.036Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:19.036Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:19.166Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:19.166Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:19.897Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:19.906Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:19.906Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:20.034Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:20.126Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:20.135Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:20.137Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:20.142Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:20.145Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:20.145Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:20.162Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:20.168Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:20.175Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:20.186Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:20.186Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:20.324Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:20.324Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:21.097Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:21.108Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:21.108Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:21.219Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:21.274Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:21.354Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:21.365Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:21.401Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:21.405Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:21.405Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:21.421Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:21.431Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:21.436Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:21.446Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:21.446Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:21.545Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:21.546Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:22.375Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:22.390Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:22.391Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:22.446Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:22.472Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:22.572Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:22.582Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:22.601Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:22.606Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:22.606Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:22.633Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:22.646Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:22.654Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:22.663Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:22.663Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:22.765Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:22.766Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:23.576Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:23.593Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:23.593Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:23.707Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:23.754Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method evaluateJavascript"}
+{"level":30,"time":"2026-07-27T12:05:23.804Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method evaluateJavascript"}
+{"level":30,"time":"2026-07-27T12:05:23.825Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:23.839Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:23.842Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:23.845Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:23.848Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:23.849Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:23.875Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:23.882Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:23.886Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:23.902Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:23.903Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:24.007Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:24.007Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:24.769Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:24.781Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:24.781Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:24.900Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:24.920Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","Cookies: ":[]}
+{"level":30,"time":"2026-07-27T12:05:24.961Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:25.015Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:25.018Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:25.037Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:25.040Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:25.041Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:25.066Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:25.139Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:25.143Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:25.159Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:25.159Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:25.264Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:25.264Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:26.010Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:26.022Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:26.023Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:26.141Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:26.159Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","Cookie data: ":"{\"name\": \"test_cookie\", \"value\": \"test_value\", \"url\": \"https://bms.startnow-fr.com\"}"}
+{"level":30,"time":"2026-07-27T12:05:26.183Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","Cookies: ":[{"name":"test_cookie","value":"test_value","domain":"bms.startnow-fr.com","path":"/","expires":-1,"httpOnly":false,"secure":true,"sameSite":"Lax"}]}
+{"level":30,"time":"2026-07-27T12:05:26.273Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:26.284Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:26.289Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:26.313Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:26.318Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:26.319Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:26.335Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:26.342Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:26.347Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:26.361Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:26.361Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:26.466Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:26.466Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:27.268Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:27.286Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:27.286Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:27.335Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:27.373Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:27.478Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:27.483Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:27.508Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:27.523Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:27.523Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:27.541Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:27.552Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:27.557Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:27.570Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:27.572Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:27.683Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:27.684Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:28.416Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:28.427Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:28.429Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:28.546Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:28.574Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-07-27T12:05:28.574Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2026-07-27T12:05:28.574Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}},{\"id\":\"page=02108983-aaed-4bb5-b3b2-7ae2c7e42790\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@7219d7a470dd9306bf1f96590ecef6c9\"},\"timestamp\":1785153927.683,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:28.574Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Trace file: "}
+{"level":30,"time":"2026-07-27T12:05:28.601Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Setting default timeout for context context=519cfb10-8e9b-457b-b18e-e7126ed03763 to 30000"}
+{"level":30,"time":"2026-07-27T12:05:28.602Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active context: context=519cfb10-8e9b-457b-b18e-e7126ed03763"}
+{"level":30,"time":"2026-07-27T12:05:28.602Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newContext"}
+{"level":30,"time":"2026-07-27T12:05:28.643Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:28.644Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}},{\"id\":\"page=02108983-aaed-4bb5-b3b2-7ae2c7e42790\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@7219d7a470dd9306bf1f96590ecef6c9\"},\"timestamp\":1785153927.683,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"},{\"id\":\"context=519cfb10-8e9b-457b-b18e-e7126ed03763\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@77cc95c9726c2122947a7187f3bb3de4\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:29.185Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:29.185Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:42.200Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:42.210Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:42.211Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:42.250Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:42.259Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.381Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.388Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-07-27T12:05:42.391Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-07-27T12:05:42.396Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.437Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.440Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.452Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.455Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changing current active page: page=685f039d-c16c-4adf-83d6-11094b17f12f"}
+{"level":30,"time":"2026-07-27T12:05:42.455Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:42.464Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.474Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.477Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active context: context=519cfb10-8e9b-457b-b18e-e7126ed03763"}
+{"level":30,"time":"2026-07-27T12:05:42.477Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changing current active page: page=685f039d-c16c-4adf-83d6-11094b17f12f"}
+{"level":30,"time":"2026-07-27T12:05:42.478Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:42.482Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-07-27T12:05:42.507Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Removed page=223b36e6-5b53-4dd9-ba77-2f6da9c4ff5b from context=519cfb10-8e9b-457b-b18e-e7126ed03763 page stack"}
+{"level":30,"time":"2026-07-27T12:05:42.520Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-07-27T12:05:42.532Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.647Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.659Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.671Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.682Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:42.682Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:42.720Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:42.777Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.783Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:42.798Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:42.799Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:43.038Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:43.038Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:43.916Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:43.923Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:43.923Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:44.021Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:44.043Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:44.043Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}},{\"id\":\"page=5813ddd8-b794-46a2-b83a-1aa2be20da3e\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@b9e5343f4b784e3245eaf4c524fa872f\"},\"timestamp\":1785153943.038,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:44.141Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:44.141Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:45.095Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:45.110Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:45.110Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:45.112Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:45.122Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:45.281Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:45.291Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:45.291Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:45.330Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:45.380Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:45.553Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:45.557Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:45.562Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:45.566Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:45.566Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Closing page with runBeforeUnload false"}
+{"level":30,"time":"2026-07-27T12:05:45.587Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closePage"}
+{"level":30,"time":"2026-07-27T12:05:45.594Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:45.599Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:45.616Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:45.616Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=85ae9d79-dfab-42d4-8059-fdbe14b70426\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@e96af7f1965c99c2374a285fb2a7692c\"},\"pageStack\":[{\"id\":\"page=66b0bbc2-990b-4f62-9c67-7f629d4df26b\",\"p\":{\"_type\":\"Page\",\"_guid\":\"page@a792000f44ff8c61cba36c9ba8543cb2\"},\"timestamp\":1785153907.125,\"pageErrors\":[],\"errorIndex\":0,\"consoleMessages\":[],\"consoleIndex\":0,\"activeDownloads\":{}}],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:45.716Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:45.716Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:46.465Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:46.475Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:46.475Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:05:46.618Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:46.636Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:46.706Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:46.711Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-07-27T12:05:46.711Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-07-27T12:05:46.715Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:46.721Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:46.726Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:46.740Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:46.743Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changing current active page: page=048fa914-0cdb-4391-b562-00900138a179"}
+{"level":30,"time":"2026-07-27T12:05:46.743Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:46.758Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:46.769Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:05:46.773Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active context: context=85ae9d79-dfab-42d4-8059-fdbe14b70426"}
+{"level":30,"time":"2026-07-27T12:05:46.773Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changing current active page: page=048fa914-0cdb-4391-b562-00900138a179"}
+{"level":30,"time":"2026-07-27T12:05:46.773Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:46.777Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-07-27T12:05:46.790Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Removed page=ac5bf4ee-7858-475f-aa2c-21f665a27902 from context=85ae9d79-dfab-42d4-8059-fdbe14b70426 page stack"}
+{"level":30,"time":"2026-07-27T12:05:46.795Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Removed page=92d02b04-33e5-4c37-9de6-f269f52f655a from context=85ae9d79-dfab-42d4-8059-fdbe14b70426 page stack"}
+{"level":30,"time":"2026-07-27T12:05:46.804Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-07-27T12:05:46.836Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-07-27T12:05:46.836Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}}"}
+{"level":30,"time":"2026-07-27T12:05:46.836Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:46.836Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Trace file: "}
+{"level":30,"time":"2026-07-27T12:05:47.065Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Setting default timeout for context context=8adc07f9-d514-49b2-b163-15a85e108408 to 30000"}
+{"level":30,"time":"2026-07-27T12:05:47.065Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active context: context=8adc07f9-d514-49b2-b163-15a85e108408"}
+{"level":30,"time":"2026-07-27T12:05:47.066Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newContext"}
+{"level":30,"time":"2026-07-27T12:05:47.089Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:47.090Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@0fdf6c1d09fa9c30b23b7ddcc046e45a\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=8adc07f9-d514-49b2-b163-15a85e108408\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@b296dbc094a2ac862d3ceeb3c37db38e\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"locale\":\"en-US\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"UTC\",\"viewport\":{\"width\":1920,\"height\":1080}},\"traceFile\":\"\"}],\"id\":\"browser=e0dfdf05-d35a-48de-8ab9-0021d865ad57\"}"}
+{"level":30,"time":"2026-07-27T12:05:47.627Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Video path: undefined"}
+{"level":30,"time":"2026-07-27T12:05:47.627Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:05:53.387Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method newPage"}
+{"level":30,"time":"2026-07-27T12:05:53.396Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:05:53.396Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"timeout: 30000 state: networkidle"}
+{"level":30,"time":"2026-07-27T12:06:01.119Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2026-07-27T12:06:01.159Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:01.172Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:01.174Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:01.176Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:01.179Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:01.183Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:01.189Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:01.192Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:01.195Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active context: context=8adc07f9-d514-49b2-b163-15a85e108408"}
+{"level":30,"time":"2026-07-27T12:06:01.195Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changing current active page: page=e3f4175a-c278-4aa8-8255-fe66ed8238fc"}
+{"level":30,"time":"2026-07-27T12:06:01.195Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Changed active page"}
+{"level":30,"time":"2026-07-27T12:06:01.199Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-07-27T12:06:01.207Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Removed page=ca21450e-f9a3-4df9-8b01-f1708bde8605 from context=8adc07f9-d514-49b2-b163-15a85e108408 page stack"}
+{"level":30,"time":"2026-07-27T12:06:01.218Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-07-27T12:06:01.227Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-07-27T12:06:02.185Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeAllBrowsers"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\Lenovo\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js:12672:15)
@@ -49,7 +350,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2026-07-11T21:55:13.781Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-07-11T21:55:13.781Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-07-11T21:55:13.866Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2026-07-11T21:55:13.866Z","pid":18172,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2026-07-27T12:06:02.201Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:02.201Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-07-27T12:06:03.899Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-07-27T12:06:03.899Z","pid":14660,"hostname":"DESKTOP-RJGUA4M","msg":"End of node method closeAllBrowsers"}
