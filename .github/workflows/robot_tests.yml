@@ -143,10 +143,14 @@ jobs:
             echo 'Waiting for MySQL...'
             sleep 2
           done
-
-      - name: Create test tables
+          
+      - name: Create test tables and seed data
         run: |
           mysql -h 127.0.0.1 -u root bms << 'EOF'
+          CREATE TABLE IF NOT EXISTS buildings (
+            building_id INT AUTO_INCREMENT PRIMARY KEY,
+            building_name VARCHAR(100)
+          );
           CREATE TABLE IF NOT EXISTS users (
             user_id INT AUTO_INCREMENT PRIMARY KEY,
             building_id INT DEFAULT 1,
@@ -157,11 +161,10 @@ jobs:
             user_tel VARCHAR(20),
             password VARCHAR(255)
           );
-          CREATE TABLE IF NOT EXISTS buildings (
-            building_id INT AUTO_INCREMENT PRIMARY KEY,
-            building_name VARCHAR(100)
-          );
-          INSERT INTO buildings (building_name) VALUES ('Building 1');
+          INSERT INTO buildings (building_id, building_name) VALUES (1, 'Building 1');
+          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (1, 1, 'S', 1, 'StartNow', 'superAdmin@start-now.fr', '+21699123456', 'hashed');
+          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (2, 1, 'O', 1, 'Mouhamed', 'mouhamed@start-now.fr', '+21699123456', 'hashed');
+          INSERT INTO users (user_id, building_id, user_type, user_role, user_name, email, user_tel, password) VALUES (3, 1, 'O', 0, 'Amir', 'amir@start-now.fr', '+21699123456', 'hashed');
           EOF
 
       - name: Run Database Tests
@@ -249,22 +252,67 @@ jobs:
         with:
           path: all-results/
 
+      - name: Download previous Allure history
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-history
+          path: allure-history/
+        continue-on-error: true
+
       - name: Install Allure
         run: |
           pip install allure-robotframework
           npm install -g allure-commandline
 
+      - name: Copy history to results
+        run: |
+          mkdir -p allure-results-combined/history
+          if [ -d "allure-history" ] && [ "$(ls -A allure-history)" ]; then
+            cp -r allure-history/. allure-results-combined/history/
+            echo "History copied successfully"
+            ls -la allure-results-combined/history/
+          else
+            echo "No history found - first run"
+          fi
+
+      - name: Combine all results
+        run: |
+          mkdir -p allure-results-combined
+          cp -r all-results/logging-results/allure-results/* allure-results-combined/ || true
+          cp -r all-results/api-results/allure-results/* allure-results-combined/ || true
+          cp -r all-results/database-results/allure-results/* allure-results-combined/ || true
+          cp -r all-results/ui-results/allure-results/* allure-results-combined/ || true
+          
+      - name: Debug - Show history files
+        run: |
+          echo "=== Allure History folder ==="
+          ls -la allure-history/ || echo "No history folder found"
+          echo "=== Combined results folder ==="
+          ls -la allure-results-combined/ || echo "No combined results folder"
+          echo "=== History inside combined ==="
+          ls -la allure-results-combined/history/ || echo "No history inside combined"
+          
       - name: Generate Allure Report
         run: |
-          allure generate \
-            all-results/logging-results/allure-results \
-            all-results/api-results/allure-results \
-            all-results/database-results/allure-results \
-            all-results/ui-results/allure-results \
-            -o allure-report --clean
+          allure generate allure-results-combined \
+                          -o allure-report --clean
+
+      - name: Save new history for next run
+        run: |
+          mkdir -p allure-history-new
+          cp -r allure-report/history/. allure-history-new/
+          echo "New history saved:"
+          ls -la allure-history-new/
 
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report/
+
+      - name: Upload Allure History
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-history
+          path: allure-history-new/
+          overwrite: true
