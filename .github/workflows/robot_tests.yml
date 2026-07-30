@@ -266,9 +266,13 @@ jobs:
 
       - name: Copy history to results
         run: |
-          if [ -d "allure-history" ]; then
-            mkdir -p allure-results-combined/history
-            cp -r allure-history/* allure-results-combined/history/ || true
+          mkdir -p allure-results-combined/history
+          if [ -d "allure-history" ] && [ "$(ls -A allure-history)" ]; then
+            cp -r allure-history/. allure-results-combined/history/
+            echo "History copied successfully"
+            ls -la allure-results-combined/history/
+          else
+            echo "No history found - first run"
           fi
 
       - name: Combine all results
@@ -295,7 +299,10 @@ jobs:
 
       - name: Save new history for next run
         run: |
-          cp -r allure-report/history allure-history-new/
+          mkdir -p allure-history-new
+          cp -r allure-report/history/. allure-history-new/
+          echo "New history saved:"
+          ls -la allure-history-new/
 
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
