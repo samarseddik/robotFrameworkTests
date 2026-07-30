@@ -74,7 +74,7 @@ TC-CRUD-007 Update The Created User
     ...    user_name=UpdatedUser
     ...    email=updateduser@test.com
     Should Be True    ${result}
-    ${record}=    Read Record By Id    users    100    user_id
+    ${record}=    Read Record By Id    users    99    user_id
     Log    Updated record: ${record}
 
 
@@ -82,7 +82,7 @@ TC-CRUD-007 Update The Created User
 TC-CRUD-008 Delete The Created User
     [Documentation]    Deletes the test user created in TC-CRUD-006.
     [Tags]             crud    delete
-    ${result}=    Delete Record By Id    users    100    user_id
+    ${result}=    Delete Record By Id    users    99    user_id
     Should Be True    ${result}
     ${count}=    Count Records In Table    users    user_id = 99
     Should Be Equal As Numbers    ${count}    0
